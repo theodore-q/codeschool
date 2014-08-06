@@ -8,6 +8,6 @@
 			name: 'Oolong',
 			price: 2.60,
 			description: 'Oolong is neither green nor black',
-        }
+        };
 
     })();
