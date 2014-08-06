@@ -1,14 +1,18 @@
-<html ng-apps="store">
-	<head>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<script type "text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
-	<script type "text/javascript" src="app.js"></script>
+<html ng-app="store">
+<head>
+  <title>Shapping up with AngularJS</title>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+</head>
+<body>
 
-	</head>
-	<body>
+  <p>{{"Hello" + " You"}}</p>
 
-<p>{{"hello" + "you"}}</p>
-<p>hello</p>
-
-	</body>
+  <!-- SCRIPT -->
+  <script>
+    (function () {
+        var app = angular.module('store', []);
+    })();
+  </script>
+</body>
 </html>
