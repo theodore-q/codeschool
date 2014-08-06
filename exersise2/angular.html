@@ -5,12 +5,17 @@
   	<script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-controller="StoreController as store">
-
-  <div ng-hide="product.soldOut" ng-repeat="product in store.products">
-    <h1>{{product.name}}</h1>
-    <h2>{{product.price | currency}}</h2>
-    <p>{{product.description}}</p>
-    <button ng-show="product.canPurchase">Add to cart</button>
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="product in store.products">
+			<h3>
+  				{{product.name}}
+    			<em class="pull-right">£{{product.price}}</em>
+    			<p>{{product.description}}</p>
+			</h3>
+			<button ng-show="product.canPurchase">Add to cart</button>
+		</li>
+	</ul>
+    
   </div>
 
 
