@@ -1,13 +1,13 @@
     (function () {
-        var app = angular.module('store', []);
+        var app = angular.module('TeaStore', []);
 
         app.controller('StoreController', function(){
-			this.product = tea;
+			this.product = Tea;
         });
-        var tea = {
+        var Tea = {
 			name: 'Oolong',
 			price: 2.60,
 			description: 'Oolong is neither green nor black',
-        };
+        }
 
     })();
