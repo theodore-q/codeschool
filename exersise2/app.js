@@ -26,7 +26,7 @@
         description: '. . .',
       }
 
-console.log(gem);
+console.log(app);
 
     })();
         console.log(gem);
