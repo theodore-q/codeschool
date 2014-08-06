@@ -1,0 +1,32 @@
+<html ng-app="gemStore">
+<head>
+  <title>Shapping up with AngularJS</title>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+</head>
+<body>
+
+  <div ng-controller="StoreController as store">
+    <h1>{{store.product.name}}</h1>
+    <h2>{{store.product.price | currency}}</h2>
+    <p>{{store.product.description}}</p>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    (function(){
+      var app = angular.module('gemStore', []);
+
+      var gem = {
+        name: "Dodecahedron",
+        price: 2.95,
+        description: '. . .',
+      }
+
+      app.controller('StoreController', function () {
+        this.product = gem;
+      });
+    })();
+  </script>
+</body>
+</html>
