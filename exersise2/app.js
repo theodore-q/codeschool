@@ -10,6 +10,12 @@
         name: "Oolong",
         price: 2.95,
         description: 'Oolong is neither green nor black',
+        images:[
+          {
+          full:'/rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
+          thumb:'oolingthumbnail.jpg',
+        },
+        ],
         canPurchase: true,
         soldOut: false,
         
