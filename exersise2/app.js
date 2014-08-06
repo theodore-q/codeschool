@@ -12,7 +12,7 @@
         description: 'Oolong is neither green nor black',
         images:[
           {
-          full:'/rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
+          full:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
           thumb:'oolingthumbnail.jpg',
         },
         ],
