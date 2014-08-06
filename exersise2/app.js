@@ -26,3 +26,4 @@
         this.product = gem;
       });
     })();
+    console.log("loaded");
