@@ -29,4 +29,3 @@
 console.log(app);
 
     })();
-        console.log(gem);
