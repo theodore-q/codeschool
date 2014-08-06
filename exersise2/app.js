@@ -13,7 +13,7 @@
 
    //  })();
 
-        (function(){
+    (function(){
       var app = angular.module('gemStore', []);
 
       var gem = {
@@ -26,4 +26,4 @@
         this.product = gem;
       });
     })();
-    console.log("loaded");
+        console.log("loaded");
