@@ -8,7 +8,7 @@
       var gems = [
       {
         name: "Oolong",
-        price: 2.95,
+        price: 4.95,
         description: 'Oolong is neither green nor black',
         images:[
           {
