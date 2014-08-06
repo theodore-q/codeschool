@@ -27,7 +27,6 @@
         canPurchase: true,
         soldOut: false,
       },
-
-console.log(app);
+];
 
     })();
