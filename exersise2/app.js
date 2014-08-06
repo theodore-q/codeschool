@@ -1,18 +1,3 @@
-   //  (function () {
-   //      var app = angular.module('TeaStore', []);
-
-   //      app.controller('StoreController', function(){
-			// this.product = Tea;
-   //      });
-
-   //      var Tea = {
-			// name: 'Oolong',
-			// price: 2.60,
-			// description: 'Oolong is neither green nor black',
-   //      };
-
-   //  })();
-
     (function(){
       var app = angular.module('gemStore', []);
 
@@ -24,7 +9,9 @@
         name: "Oolong",
         price: 2.95,
         description: 'Oolong is neither green nor black',
-      }
+        canPurchase: true
+      };
+
 
 console.log(app);
 
