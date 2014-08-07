@@ -22,7 +22,7 @@
 
 
 
-      var foo = {};
+      var foo = [];
       function initialize() {
         var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
         feed.setNumEntries(10);
