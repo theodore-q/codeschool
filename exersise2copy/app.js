@@ -79,23 +79,17 @@
         title: "orem ipsumksjdljlsfjlfjlsdkjfht row",
         },
 ];
-      var News4 = [
-            {
-        author: "ipsum",
-        contentSnippet: "lorem ipsumksjdljlsfjlfjlsdkjf in pictures",
-        link: "http://telegraph.feedsportal.com/c/32726/f/534871/s/3d47a278/sc/38/l/0L0Stelegraph0O0Cnews0Cpicturegalleries0Cuknews0C110A187820CThe0ECats0EProtection0ENational0ECat0EAwards0Ethe0Ewinner0Eand0Efinalists0Ein0Epictures0Bhtml/story01.htm",
-        publishedDate: "Thu, 07 Aug 2014 07:15:07 -0700",
-        title: "Torem ipsumksjdljlsfjlfjlsdkjf and finalists in pictures",
-        
-      },
-      {
-        author: "Telegraph Staff",
-        contentSnippet: "orem ipsumksjdljlsfjlfjlsdkjf his dispute with Wikimedia after it refused to remove his photo of a 'monkey ...",
-        link: "http://telegraph.feedsportal.com/c/32726/f/534871/s/3d44994e/sc/38/l/0L0Stelegraph0O0Ctechnology0Cnews0C110A180A620CMonkeys0Eselfie0Esparks0Ecopyright0Erow0Bhtml/story01.htm",
-        publishedDate: "Thu, 07 Aug 2014 07:06:30 -0700",
-        title: "orem ipsumksjdljlsfjlfjlsdkjfht row",
-        },
-      ];
+      var News4;
 
+      $.ajax({
+    
+    type: "GET",
+    url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss",
+    dataType: "jsonp",
+
+    success: function(data) {
+      console.log(data);
+    }
+  })();
 
     })();
