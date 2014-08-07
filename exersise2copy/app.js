@@ -1,7 +1,7 @@
 (function(){
       var app = angular.module('NewsFeeds', []);
 
-      app.controller('NewsController', function($scope,$http) {
+    app.controller('NewsController', function($scope,$http) {
       //$http is working in this
           this.telegraph = News;
           this.bbc = News3;
@@ -13,7 +13,7 @@
       url: 'News.json'
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.news.mercury = data;
+          $scope.news = data;
           console.log(data);
 
           //console.log(data.responseData.feed.entries);
@@ -24,10 +24,7 @@
 
         }).error(function(data, status, headers, config) {
           });
-
-
-
- });
+    });
 
       app.controller('PanelController', function (){
       this.tab = 1;
