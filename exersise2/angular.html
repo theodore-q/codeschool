@@ -19,7 +19,7 @@
 			
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
-					<li ng-class="{active: panel.isSelected(1)}"> 
+					<li ng-class="{ active: panel.isSelected(1)}"> 
 						<a href ng-click="panel.selectTab(1)">description</a> 
 					</li>
 					<li ng-class="{active: panel.isSelected(2)}"> 
@@ -31,7 +31,7 @@
 				</ul>
 			</section>
 			
-			<div class="panel" ng-show="panel,isSelected(1)">
+			<div class="panel" ng-show="panel.isSelected(1)">
 				<h4>Description</h4>
 				<p>{{product.description}}</p>
 			</div>
