@@ -3,8 +3,7 @@
 
       app.controller('NewsController', function($scope,$http) {
       //$http is working in this
-           this.telegraph = News;
-           this.bbc = News3;
+
 
       $http({
       method: 'get',
@@ -14,6 +13,8 @@
           // data contains the response
           $scope.news.mercury = data;
           console.log(data);
+          this.telegraph = News;
+          this.bbc = News3;
           //console.log(data.responseData.feed.entries);
           //return data.responseData.feed.entries;
           // status is the HTTP status
