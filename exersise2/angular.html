@@ -16,13 +16,13 @@
     			<p>{{product.description}}</p>
     		</h4>
 			<button ng-show="product.canPurchase">Add to cart</button>
-			<section>
+			<section ng-init"tab = 1">
 				<ul class="nav nav-pills">
 					<li> <a href ng-click"tab = 1">description</a> </li>
 					<li> <a href ng-click"tab = 2">history</a> </li>
 					<li> <a href ng-click"tab = 3">Reviews</a> </li>
 				</ul>
-					{{tab}}
+					<p>{{tab}}</p>
 			</section>
 		</li>
 	</ul>
