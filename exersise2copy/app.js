@@ -1,5 +1,7 @@
 (function(){
-      var app = angular.module('NewsFeeds', []);
+      var app = angular.module('NewsFeeds', ['$scope','$http', function($scope,$http) {
+      //$http is working in this
+ }]);
 
       app.controller('NewsController', function () {
         this.telegraph = News;
@@ -80,7 +82,7 @@
         },
       ];
       var News4 = $http({
-        
+
       method: 'JSONP',
       url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
         }).success(function(data, status, headers, config) {
