@@ -20,13 +20,13 @@
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
 					<li ng-class="{ active: panel.isSelected(1)}"> 
-						<a href ng-click="panel.setTab(1)">description</a> 
+						<a href ng-click="panel.selectTab(1)">description</a> 
 					</li>
 					<li ng-class="{ active: panel.isSelected(2)}"> 
-						<a href ng-click="panel.setTab(2)">history</a> 
+						<a href ng-click="panel.selectTab(2)">history</a> 
 					</li>
 					<li ng-class="{ active: panel.isSelected(3)}"> 
-						<a href ng-click="panel.setTab(3)">Reviews</a> 
+						<a href ng-click="panel.selectTab(3)">Reviews</a> 
 					</li>
 				</ul>
 			</section>
