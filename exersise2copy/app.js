@@ -90,6 +90,6 @@
     success: function(data) {
       console.log(data.responseData.feed.entries);
     }
-  })();
+  });
 
     })();
