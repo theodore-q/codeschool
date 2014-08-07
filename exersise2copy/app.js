@@ -21,17 +21,17 @@
       //   }).error(function(data, status, headers, config) {
       //     });
 
-  app.controller("NewsController", function($scope, $http) {
-    this.telegraph = News;
-    this.bbc = News3;
-    $http.JSONP('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss').
-      success(function(data, status, headers, config) {
-        $scope.posts = data;
-      }).
-      error(function(data, status, headers, config) {
-        // log error
-      });
-  });
+  // app.controller("NewsController", function($scope, $http) {
+  //   this.telegraph = News;
+  //   this.bbc = News3;
+  //   $http.JSONP('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss').
+  //     success(function(data, status, headers, config) {
+  //       $scope.posts = data;
+  //     }).
+  //     error(function(data, status, headers, config) {
+  //       // log error
+  //     });
+  // });
 
 
 
