@@ -3,6 +3,7 @@
 
       app.controller('NewsController', function () {
         this.articles = News;
+        this.BBCarticles = News3;
       });
 
       app.controller('PanelController', function (){

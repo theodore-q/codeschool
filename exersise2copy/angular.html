@@ -42,8 +42,17 @@
 				</div>
 				
 				<div class="panel" ng-show="panel.isSelected(2)">
-					<h4>history</h4>
-					<blockquote>None yet</blockquote>
+						<ul class="list-group">
+							<li class="list-group-item" ng-repeat="article in news3.articles">
+								<h3>
+					  				{{articles.title}}
+					    			<em class="pull-right">{{articles.publishedDate}}</em>
+					    		</h3>
+					    		<h4>
+					    			<p>{{articles.contentSnippet}}</p>
+					    		</h4>
+							</li>
+						</ul>
 				</div>
 				
 				<div class="panel" ng-show="panel.isSelected(3)">
