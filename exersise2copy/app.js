@@ -7,12 +7,13 @@
            this.bbc = News3;
 
       $http({
-      method: 'JSONP',
-      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
+      method: 'get',
+     // url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
+      url: 'News.json'
         }).success(function(data, status, headers, config) {
           // data contains the response
           $scope.posts = data;
-          console.log(data.responseData.feed.entries);
+          //console.log(data.responseData.feed.entries);
           //return data.responseData.feed.entries;
           // status is the HTTP status
           // headers is the header getter function
