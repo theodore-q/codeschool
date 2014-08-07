@@ -4,14 +4,14 @@
       app.controller('NewsController', function($scope, $http) {
 
            $http.JSONP('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss').
-        }).success(function(data, status, headers, config) {
+           success(function(data, status, headers, config) {
           // data contains the response
-          this.telegraph = News;
-          this.bbc = News3;
+
 
           $scope.this.mercury = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
-
+          this.telegraph = News;
+          this.bbc = News3;
 
           //return data.responseData.feed.entries;
           // status is the HTTP status
