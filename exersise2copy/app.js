@@ -4,7 +4,7 @@
       app.controller('NewsController', function () {
         this.telegraph = News;
         this.bbc = News3;
-        this.xml = news4;
+        this.xml = News4;
       });
 
       app.controller('PanelController', function (){
