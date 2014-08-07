@@ -56,8 +56,17 @@
 				</div>
 				
 				<div class="panel" ng-show="panel.isSelected(3)">
-					<h4>Reviews</h4>
-					<blockquote>None yet</blockquote>
+						<ul class="list-group">
+							<li class="list-group-item" ng-repeat="bbcarticle in news.xml">
+								<h3>
+					  				{{bbcarticle.title}}
+					    			<em class="pull-right">{{bbcarticle.publishedDate}}</em>
+					    		</h3>
+					    		<h4>
+					    			<p>{{bbcarticle.contentSnippet}}</p>
+					    		</h4>
+							</li>
+						</ul>
 				</div>
 			</section>
 
