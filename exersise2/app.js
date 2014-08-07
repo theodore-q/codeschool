@@ -17,7 +17,7 @@
   });
 
 
-      var gems = function (){
+      var gems2 = function (){
 
       google.load("feeds", "1");
 
@@ -26,7 +26,7 @@
      function initialize() {
       var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
       feed.setNumEntries(10);
-      //console.log(feed),
+      console.log(feed),
       feed.load(function(result) {
         if (!result.error) {
         return result;
