@@ -1,7 +1,7 @@
 (function(){
       var app = angular.module('NewsFeeds', []);
 
-      app.controller('NewsController', ['$scope','$http', function($scope,$http) {
+      app.controller('NewsController', function($scope,$http) {
       //$http is working in this
            this.telegraph = News;
            this.bbc = News3;
@@ -23,7 +23,7 @@
 
 
 
- }]);
+ });
 
       app.controller('PanelController', function (){
       this.tab = 1;
