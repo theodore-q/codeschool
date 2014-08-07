@@ -2,7 +2,7 @@
       var app = angular.module('NewsFeeds', []);
 
       app.controller('NewsController', function () {
-        this.Telegrapharticles = News;
+        this.articles = News;
       });
 
       app.controller('PanelController', function (){
