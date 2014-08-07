@@ -28,8 +28,8 @@
       //console.log(feed),
         feed.load(function(result) {
          if (!result.error) {
-          console.log(result);
-          return result;
+          console.log(result.feed);
+          return result.feed;
         
 
  
