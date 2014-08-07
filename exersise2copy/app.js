@@ -2,8 +2,8 @@
       var app = angular.module('NewsFeeds', []);
 
       app.controller('NewsController', function () {
-        this.articles = News;
-        this.BBCarticles = News3;
+        this.telegraph = News;
+        this.bbc = News3;
       });
 
       app.controller('PanelController', function (){

@@ -29,7 +29,7 @@
 			
 				<div class="panel" ng-show="panel.isSelected(1)">
 						<ul class="list-group">
-							<li class="list-group-item" ng-repeat="article in news.articles">
+							<li class="list-group-item" ng-repeat="article in news.telegraph">
 								<h3>
 					  				{{article.title}}
 					    			<em class="pull-right">{{article.publishedDate}}</em>
@@ -43,13 +43,13 @@
 				
 				<div class="panel" ng-show="panel.isSelected(2)">
 						<ul class="list-group">
-							<li class="list-group-item" ng-repeat="article in news3.BBCarticles">
+							<li class="list-group-item" ng-repeat="bbcarticle in news.bbc">
 								<h3>
-					  				{{BBCarticles.title}}
-					    			<em class="pull-right">{{BBCarticles.publishedDate}}</em>
+					  				{{bbcarticle.title}}
+					    			<em class="pull-right">{{bbcarticle.publishedDate}}</em>
 					    		</h3>
 					    		<h4>
-					    			<p>{{BBCarticles.contentSnippet}}</p>
+					    			<p>{{bbcarticle.contentSnippet}}</p>
 					    		</h4>
 							</li>
 						</ul>
