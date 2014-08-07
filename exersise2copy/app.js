@@ -3,8 +3,8 @@
 
     app.controller('NewsController', function($scope,$http) {
       //$http is working in this
-          this.telegraph = News;
-          this.bbc = News3;
+          // this.telegraph = News;
+          // this.bbc = News3;
 
 
       $http({
