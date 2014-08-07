@@ -22,22 +22,22 @@
 
 
 
-      function initialize() {
+      var foo = function initialize() {
         var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
         feed.setNumEntries(10);
       //console.log(feed),
         feed.load(function(result) {
          if (!result.error) {
           console.log(result.feed);
-          return result.feed.entries[0];
-        
-
- 
+          return result.feed;
         }
         
       });
-    }
+    };
+    
     google.setOnLoadCallback(initialize);
+
+    return foo;
   }();
   console.log(gems2);
 
