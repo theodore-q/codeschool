@@ -6,7 +6,7 @@
       });
 
       app.controller('PanelController', function(){
-        this.tab = 1;
+        this.tab = 2;
 
         this.selectTab = function(setTab) {
           this.tab = setTab;
