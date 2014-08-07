@@ -29,13 +29,13 @@
 			
 				<div class="panel" ng-show="panel.isSelected(1)">
 						<ul class="list-group">
-							<li class="list-group-item" ng-repeat="Telegrapharticles in news.articles">
+							<li class="list-group-item" ng-repeat="article in news.articles">
 								<h3>
-					  				{{Telegrapharticles.title}}
-					    			<em class="pull-right">{{Telegrapharticles.publishedDate}}</em>
+					  				{{article.title}}
+					    			<em class="pull-right">{{article.publishedDate}}</em>
 					    		</h3>
 					    		<h4>
-					    			<p>{{Telegrapharticles.contentSnippet}}</p>
+					    			<p>{{article.contentSnippet}}</p>
 					    		</h4>
 							</li>
 						</ul>
