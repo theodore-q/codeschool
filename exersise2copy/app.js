@@ -79,6 +79,7 @@
         title: "orem ipsumksjdljlsfjlfjlsdkjfht row",
         },
 ];
+      var News4 = [];
 
 
     })();
