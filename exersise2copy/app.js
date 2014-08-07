@@ -1,8 +1,8 @@
-    (function(){
+(function(){
       var app = angular.module('gemStore', []);
 
-      app.controller('StoreController', function () {
-        this.products = gems;
+      app.controller('NewsController', function () {
+        this.articles = News.enrtries;
       });
 
       app.controller('PanelController', function (){
@@ -29,7 +29,7 @@
       //console.log(feed),
         feed.load(function(result) {
          if (!result.error) {
-          //console.log(result.feed);
+          console.log(result.feed);
           foo = result.feed;
         }
         
