@@ -16,26 +16,26 @@
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
 					<li ng-class="{active:panel.isSelected(1) }"> 
-						<a href ng-click="panel.selectTab(1)">Description</a>
+						<a href ng-click="panel.selectTab(1)">Telegraph</a>
 					</li>
 					<li ng-class="{ active: panel.isSelected(2)}"> 
-						<a href ng-click="panel.selectTab(2)">history</a> 
+						<a href ng-click="panel.selectTab(2)">BBC</a> 
 					</li>
 					<li ng-class="{ active: panel.isSelected(3)}"> 
-						<a href ng-click="panel.selectTab(3)">Reviews</a> 
+						<a href ng-click="panel.selectTab(3)">Leicester mercury</a> 
 					</li>
 				</ul>
 			
 			
 				<div class="panel" ng-show="panel.isSelected(1)">
 						<ul class="list-group">
-							<li class="list-group-item" ng-repeat="article in news.articles">
+							<li class="list-group-item" ng-repeat="Telegrapharticles in news.articles">
 								<h3>
-					  				{{article.title}}
-					    			<em class="pull-right">{{article.publishedDate}}</em>
+					  				{{Telegrapharticles.title}}
+					    			<em class="pull-right">{{Telegrapharticles.publishedDate}}</em>
 					    		</h3>
 					    		<h4>
-					    			<p>{{article.contentSnippet}}</p>
+					    			<p>{{Telegrapharticles.contentSnippet}}</p>
 					    		</h4>
 							</li>
 						</ul>
