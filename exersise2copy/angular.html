@@ -57,13 +57,13 @@
 				
 				<div class="panel" ng-show="panel.isSelected(3)">
 						<ul class="list-group">
-							<li class="list-group-item" ng-repeat="xmlarticle in news.mercury">
+							<li class="list-group-item" ng-repeat="post in posts">
 								<h3>
-					  				{{xmlarticle.title}}
-					    			<em class="pull-right">{{xmlarticle.publishedDate}}</em>
+					  				{{post.title}}
+					    			<em class="pull-right">{{post.publishedDate}}</em>
 					    		</h3>
 					    		<h4>
-					    			<p>{{xmlarticle.contentSnippet}}</p>
+					    			<p>{{post.contentSnippet}}</p>
 					    		</h4>
 							</li>
 						</ul>

@@ -13,6 +13,7 @@
         }).success(function(data, status, headers, config) {
           // data contains the response
           $scope.mercury = data;
+          console.log(data);
           //console.log(data.responseData.feed.entries);
           //return data.responseData.feed.entries;
           // status is the HTTP status
