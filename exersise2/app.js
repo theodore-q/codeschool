@@ -30,10 +30,11 @@
       feed.load(function(result) {
         if (!result.error) {
         return result;
-        console.log(gems);
+        
 
  
         }
+        console.log(gems);
       });
     }
     google.setOnLoadCallback(initialize);
