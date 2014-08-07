@@ -4,7 +4,7 @@
       app.controller('NewsController', function () {
         this.telegraph = News;
         this.bbc = News3;
-        this.xml = News4;
+        this.mercury = News4;
       });
 
       app.controller('PanelController', function (){
@@ -18,31 +18,31 @@
     };
   });
 
-  var News2 = function (){
+  // var News2 = function (){
 
-      google.load("feeds", "1");
+  //     google.load("feeds", "1");
 
 
 
-      var foo;
-      function initialize() {
-        var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
-        feed.setNumEntries(10);
-      //console.log(feed),
-        feed.load(function(result) {
-         if (!result.error) {
-          console.log(result.feed);
-          foo = result.feed;
-        }
+  //     var foo;
+  //     function initialize() {
+  //       var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
+  //       feed.setNumEntries(10);
+  //     //console.log(feed),
+  //       feed.load(function(result) {
+  //        if (!result.error) {
+  //         console.log(result.feed);
+  //         foo = result.feed;
+  //       }
         
-      });
-    };
+  //     });
+  //   };
     
-    google.setOnLoadCallback(initialize);
+  //   google.setOnLoadCallback(initialize);
 
-    return foo;
-  }();
-  console.log(News);
+  //   return foo;
+  // }();
+  // console.log(News);
 
 
       var News = [
@@ -79,16 +79,18 @@
         title: "orem ipsumksjdljlsfjlfjlsdkjfht row",
         },
       ];
-      var News4 = $.ajax({
+      var News4;
+
+      $.ajax({
     
       type: "GET",
       url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss",
       dataType: "jsonp",
 
       success: function(data) {
-        console.log(data);
-        console.log(data.responseData.feed.entries);
-        return data.responseData.feed.entries;
+        // console.log(data);
+        // console.log(data.responseData.feed.entries);
+        News4 = data.responseData.feed.entries;
       }
   });
 
