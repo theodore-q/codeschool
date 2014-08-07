@@ -86,6 +86,7 @@
     dataType: "jsonp",
 
     success: function(data) {
+      console.log(data.responseData.feed.entries);
       return data.responseData.feed.entries;
     }
   });
