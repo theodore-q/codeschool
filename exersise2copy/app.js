@@ -33,7 +33,7 @@
 
  
         }
-        console.log(gems);
+        console.log(gems2);
       });
     }
     google.setOnLoadCallback(initialize);
