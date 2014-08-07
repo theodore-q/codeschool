@@ -16,7 +16,7 @@
     };
   });
 
-      var gems2 = function (){
+      var News = function (){
 
       google.load("feeds", "1");
 
@@ -29,7 +29,7 @@
       //console.log(feed),
         feed.load(function(result) {
          if (!result.error) {
-         // console.log(result.feed);
+          console.log(result.feed);
           foo = result.feed;
         }
         
@@ -40,7 +40,7 @@
 
     return foo;
   }();
-  console.log(gems2);
+  console.log(News);
 
 
       var gems = [
