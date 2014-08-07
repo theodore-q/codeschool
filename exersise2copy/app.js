@@ -7,7 +7,7 @@
            this.bbc = News3;
            this.mercury = $http({
 
-      method: 'JSONP',
+      method: 'GET',
       url: 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=Apple+Cake'
         }).success(function(data, status, headers, config) {
           // data contains the response
