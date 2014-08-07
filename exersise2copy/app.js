@@ -16,7 +16,7 @@
     };
   });
 
-      var gems2 = function (){
+      var gems = function (){
 
       google.load("feeds", "1");
 
@@ -39,10 +39,10 @@
     }
     google.setOnLoadCallback(initialize);
   }();
-  console.log(gems2);
+  console.log(gems);
 
 
-      var gems = [
+      var gems2 = [
       {
         name: "Oolong",
         price: 4.95,
