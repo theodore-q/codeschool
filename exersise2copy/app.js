@@ -7,7 +7,7 @@
            this.bbc = News3;
            this.mercury = $http({
 
-      method: 'JSONP',
+      method: 'JSON',
       url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
         }).success(function(data, status, headers, config) {
           // data contains the response
