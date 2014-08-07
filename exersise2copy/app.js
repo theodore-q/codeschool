@@ -8,7 +8,7 @@
            this.mercury = $http({
 
       method: 'JSONP',
-      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://feeds.feedburner.com/marcqualie'
+      url: 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=Apple+Cake'
         }).success(function(data, status, headers, config) {
           // data contains the response
           console.log(data.responseData.feed.entries);
