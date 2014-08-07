@@ -12,7 +12,7 @@
         }).success(function(data, status, headers, config) {
           // data contains the response
           console.log(data.responseData.feed.entries);
-          return data.responseData.feed.entries;
+          //return data.responseData.feed.entries;
           // status is the HTTP status
           // headers is the header getter function
           // config is the object that was used to create the HTTP request
