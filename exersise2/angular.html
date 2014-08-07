@@ -22,10 +22,10 @@
 					<li ng-class="{ active: panel.isSelected(1)}"> 
 						<a href ng-click="panel.selectTab(1)">description</a> 
 					</li>
-					<li ng-class="{active: panel.isSelected(2)}"> 
+					<li ng-class="{ active: panel.isSelected(2)}"> 
 						<a href ng-click="panel.selectTab(2)">history</a> 
 					</li>
-					<li ng-class="{active: panel.isSelected(3)}"> 
+					<li ng-class="{ active: panel.isSelected(3)}"> 
 						<a href ng-click="panel.selectTab(3)">Reviews</a> 
 					</li>
 				</ul>
@@ -36,12 +36,12 @@
 				<p>{{product.description}}</p>
 			</div>
 			
-			<div class="panel" ng-show="tab === 2">
+			<div class="panel" ng-show="panel.isSelected(2)">
 				<h4>history</h4>
 				<blockquote>None yet</blockquote>
 			</div>
 			
-			<div class="panel" ng-show="tab === 3">
+			<div class="panel" ng-show="panel.isSelected(3)">
 				<h4>Reviews</h4>
 				<blockquote>None yet</blockquote>
 			</div>
