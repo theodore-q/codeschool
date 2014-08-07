@@ -17,47 +17,26 @@
   });
 
 
-      var gems = [
-      {
-        name: "Oolong",
-        price: 4.95,
-        description: 'Oolong is neither green nor black',
-        images:[
-          {
-          full:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
-          thumb:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
-        },
-        ],
-        canPurchase: true,
-        soldOut: false,
-        
-      },
-      {
-        name: "Darjeeling",
-        price: 2.95,
-        description: 'The champagne of tea',
-        images:[
-          {
-          full:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
-          thumb:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
-        },
-        ],
-        canPurchase: true,
-        soldOut: false,
-      },
-      {
-        name: "Sencha",
-        price: 2.95,
-        description: 'A crisp green tea',
-        images:[
-          {
-          full:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
-          thumb:'rustic-ti-kuan-yin-oolong-tea-256px-256px.jpg',
-        },
-        ],
-        canPurchase: true,
-        soldOut: false,
-      },
-];
+      var gems = function (){
+
+      google.load("feeds", "1");
+
+
+
+     function initialize() {
+      var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
+      feed.setNumEntries(10);
+      //console.log(feed),
+      feed.load(function(result) {
+        if (!result.error) {
+        return result;
+        console.log(gems);
+
+ 
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+  }();
 
     })();

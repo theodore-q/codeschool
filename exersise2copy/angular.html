@@ -1,0 +1,58 @@
+<html ng-app="gemStore">
+<head>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="product in store.products">
+			<h3>
+  				{{product.name}}
+    			<em class="pull-right">{{product.price | currency: "£"}}</em>
+    			<p><img ng-src="{{product.images[0].full}}"/></p>
+    		</h3>
+    		<h4>
+    			<p>{{product.description}}</p>
+    		</h4>
+			<button ng-show="product.canPurchase">Add to cart</button>
+			
+			<section ng-controller="PanelController as panel">
+				<ul class="nav nav-pills">
+					<li ng-class="{active:panel.isSelected(1) }"> 
+						<a href ng-click="panel.selectTab(1)">Description</a>
+					</li>
+					<li ng-class="{ active: panel.isSelected(2)}"> 
+						<a href ng-click="panel.selectTab(2)">history</a> 
+					</li>
+					<li ng-class="{ active: panel.isSelected(3)}"> 
+						<a href ng-click="panel.selectTab(3)">Reviews</a> 
+					</li>
+				</ul>
+			
+			
+				<div class="panel" ng-show="panel.isSelected(1)">
+					<h4>Description</h4>
+					<p>{{product.description}}</p>
+				</div>
+				
+				<div class="panel" ng-show="panel.isSelected(2)">
+					<h4>history</h4>
+					<blockquote>None yet</blockquote>
+				</div>
+				
+				<div class="panel" ng-show="panel.isSelected(3)">
+					<h4>Reviews</h4>
+					<blockquote>None yet</blockquote>
+				</div>
+			</section>
+		</li>
+	</ul>
+    
+  </div>
+
+
+
+
+	</body>
+</html>
