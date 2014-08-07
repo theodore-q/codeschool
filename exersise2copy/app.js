@@ -1,7 +1,5 @@
 (function(){
-      var app = angular.module('NewsFeeds', ['$scope','$http', function($scope,$http) {
-      //$http is working in this
- }]);
+      var app = angular.module('NewsFeeds', []);
 
       app.controller('NewsController', function () {
         this.telegraph = News;
