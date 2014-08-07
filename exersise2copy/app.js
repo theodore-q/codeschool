@@ -1,8 +1,8 @@
 (function(){
-      var app = angular.module('gemStore', []);
+      var app = angular.module('NewsFeeds', []);
 
       app.controller('NewsController', function () {
-        this.articles = News.enrtries;
+        this.articles = News.entries;
       });
 
       app.controller('PanelController', function (){

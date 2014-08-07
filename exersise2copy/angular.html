@@ -10,48 +10,16 @@
 
 
 </head>
-<body ng-controller="StoreController as store">
+<body ng-controller="NewsController as news">
 	<ul class="list-group">
-		<li class="list-group-item" ng-repeat="product in store.products">
+		<li class="list-group-item" ng-repeat="article in news.articles">
 			<h3>
-  				{{product.name}}
-    			<em class="pull-right">{{product.price | currency: "£"}}</em>
-    			<p><img ng-src="{{product.images[0].full}}"/></p>
+  				{{article.title}}
+    			<em class="pull-right">{{product.publishedDate}}</em>
     		</h3>
     		<h4>
-    			<p>{{product.description}}</p>
+    			<p>{{product.contentSnippet}}</p>
     		</h4>
-			<button ng-show="product.canPurchase">Add to cart</button>
-			
-			<section ng-controller="PanelController as panel">
-				<ul class="nav nav-pills">
-					<li ng-class="{active:panel.isSelected(1) }"> 
-						<a href ng-click="panel.selectTab(1)">Description</a>
-					</li>
-					<li ng-class="{ active: panel.isSelected(2)}"> 
-						<a href ng-click="panel.selectTab(2)">history</a> 
-					</li>
-					<li ng-class="{ active: panel.isSelected(3)}"> 
-						<a href ng-click="panel.selectTab(3)">Reviews</a> 
-					</li>
-				</ul>
-			
-			
-				<div class="panel" ng-show="panel.isSelected(1)">
-					<h4>Description</h4>
-					<p>{{product.description}}</p>
-				</div>
-				
-				<div class="panel" ng-show="panel.isSelected(2)">
-					<h4>history</h4>
-					<blockquote>None yet</blockquote>
-				</div>
-				
-				<div class="panel" ng-show="panel.isSelected(3)">
-					<h4>Reviews</h4>
-					<blockquote>None yet</blockquote>
-				</div>
-			</section>
 		</li>
 	</ul>
     
