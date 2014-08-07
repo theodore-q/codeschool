@@ -1,11 +1,13 @@
 (function(){
       var app = angular.module('NewsFeeds', []);
 
-      app.controller('NewsController', function () {
-        this.telegraph = News;
-        this.bbc = News3;
-        this.mercury = News4;
-      });
+      app.controller('NewsController', ['$scope','$http', function($scope,$http) {
+      //$http is working in this
+ }], function () {
+      this.telegraph = News;
+      this.bbc = News3;
+      this.mercury = News4;
+          });
 
       app.controller('PanelController', function (){
       this.tab = 1;
