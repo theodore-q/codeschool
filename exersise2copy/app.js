@@ -79,16 +79,14 @@
         title: "orem ipsumksjdljlsfjlfjlsdkjfht row",
         },
 ];
-      var News4;
-
-      $.ajax({
+      var News4 = $.ajax({
     
     type: "GET",
     url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss",
     dataType: "jsonp",
 
     success: function(data) {
-      console.log(data.responseData.feed.entries);
+      return data.responseData.feed.entries;
     }
   });
 
