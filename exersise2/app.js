@@ -5,20 +5,16 @@
         this.products = gems;
       });
 
-      app.controller('PanelController', function(){
-        this.tab = 2;
-
-        this.selectTab = function(setTab) {
-          this.tab = setTab;
-        };
-      
-
-        this.isSelected = function(checkTab){
-          if (this.tab === checkTab){
-            return true;
-          }
-        };
-      });
+      app.controller('PanelController', function (){
+      this.tab = 1;
+    
+      this.selectTab = function (setTab){
+        this.tab = setTab;
+      };
+      this.isSelected = function(checkTab) {
+        return this.tab === checkTab;
+    };
+  });
 
 
       var gems = [
