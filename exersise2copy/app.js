@@ -3,7 +3,9 @@
 
       app.controller('NewsController', ['$scope','$http', function($scope,$http) {
       //$http is working in this
-            var News4 = $http({
+           this.telegraph = News;
+           this.bbc = News3;
+           this.mercury = $http({
 
       method: 'JSONP',
       url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
@@ -13,13 +15,13 @@
           // status is the HTTP status
           // headers is the header getter function
           // config is the object that was used to create the HTTP request
+
         }).error(function(data, status, headers, config) {
           });
- }], function () {
-      this.telegraph = News;
-      this.bbc = News3;
-      this.mercury = News4;
-          });
+
+
+
+ }]);
 
       app.controller('PanelController', function (){
       this.tab = 1;
