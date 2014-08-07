@@ -17,7 +17,7 @@
     		</h4>
 			<button ng-show="product.canPurchase">Add to cart</button>
 			
-			<section ng-init"tab = 1">
+			<section ng-init="tab = 1" ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
 					<li ng-class="{active: panel,isSelected(1)}"> 
 						<a href ng-click="panel.selectTab(1)">description</a> 
@@ -29,7 +29,7 @@
 						<a href ng-click="panel.selectTab(3)">Reviews</a> 
 					</li>
 				</ul>
-			</section ng-init="tab = 1" ng-controller="PanelController as panel">
+			</section>
 			
 			<div class="panel" ng-show="panel,isSelected(1)">
 				<h4>Description</h4>
