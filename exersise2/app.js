@@ -14,7 +14,9 @@
       
 
         this.isSelected = function(checkTab){
-          return this.tab === checkTab;
+          if (this.tab === checkTab){
+            return true;
+          }
         };
       });
 
