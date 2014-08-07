@@ -39,7 +39,7 @@
 
     return foo;
   }();
-  console.log(gems2);
+  console.log("test " + gems2);
 
 
       var gems = [
