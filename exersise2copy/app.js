@@ -5,7 +5,6 @@
       //$http is working in this
           this.telegraph = News;
           this.bbc = News3;
-          $scope.news.mercury = data;
 
 
       $http({
