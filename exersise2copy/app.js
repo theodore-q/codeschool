@@ -29,7 +29,7 @@
         feed.load(function(result) {
          if (!result.error) {
           console.log(result.feed);
-          return result.feed.toArray();
+          return result.feed.entries[0];
         
 
  
