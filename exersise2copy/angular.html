@@ -11,17 +11,52 @@
 
 </head>
 <body ng-controller="NewsController as news">
-	<ul class="list-group">
-		<li class="list-group-item" ng-repeat="article in news.articles">
-			<h3>
-  				{{article.title}}
-    			<em class="pull-right">{{article.publishedDate}}</em>
-    		</h3>
-    		<h4>
-    			<p>{{article.contentSnippet}}</p>
-    		</h4>
-		</li>
-	</ul>
+	
+
+			<section ng-controller="PanelController as panel">
+				<ul class="nav nav-pills">
+					<li ng-class="{active:panel.isSelected(1) }"> 
+						<a href ng-click="panel.selectTab(1)">Description</a>
+					</li>
+					<li ng-class="{ active: panel.isSelected(2)}"> 
+						<a href ng-click="panel.selectTab(2)">history</a> 
+					</li>
+					<li ng-class="{ active: panel.isSelected(3)}"> 
+						<a href ng-click="panel.selectTab(3)">Reviews</a> 
+					</li>
+				</ul>
+			
+			
+				<div class="panel" ng-show="panel.isSelected(1)">
+						<ul class="list-group">
+							<li class="list-group-item" ng-repeat="article in news.articles">
+								<h3>
+					  				{{article.title}}
+					    			<em class="pull-right">{{article.publishedDate}}</em>
+					    		</h3>
+					    		<h4>
+					    			<p>{{article.contentSnippet}}</p>
+					    		</h4>
+							</li>
+						</ul>
+				</div>
+				
+				<div class="panel" ng-show="panel.isSelected(2)">
+					<h4>history</h4>
+					<blockquote>None yet</blockquote>
+				</div>
+				
+				<div class="panel" ng-show="panel.isSelected(3)">
+					<h4>Reviews</h4>
+					<blockquote>None yet</blockquote>
+				</div>
+			</section>
+
+
+
+
+
+
     
   </div>
 

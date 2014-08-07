@@ -16,31 +16,31 @@
     };
   });
 
-  // var News = function (){
+  var News2 = function (){
 
-  //     google.load("feeds", "1");
+      google.load("feeds", "1");
 
 
 
-  //     var foo;
-  //     function initialize() {
-  //       var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
-  //       feed.setNumEntries(10);
-  //     //console.log(feed),
-  //       feed.load(function(result) {
-  //        if (!result.error) {
-  //         console.log(result.feed);
-  //         foo = result.feed;
-  //       }
+      var foo;
+      function initialize() {
+        var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
+        feed.setNumEntries(10);
+      //console.log(feed),
+        feed.load(function(result) {
+         if (!result.error) {
+          console.log(result.feed);
+          foo = result.feed;
+        }
         
-  //     });
-  //   };
+      });
+    };
     
-  //   google.setOnLoadCallback(initialize);
+    google.setOnLoadCallback(initialize);
 
-  //   return foo;
-  // }();
-  // console.log(News);
+    return foo;
+  }();
+  console.log(News);
 
 
       var News = [
