@@ -79,19 +79,19 @@
         title: "orem ipsumksjdljlsfjlfjlsdkjfht row",
         },
       ];
-      var News4;
+      var News4 = $http({
+        
+      method: 'JSONP',
+      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
+        }).success(function(data, status, headers, config) {
+          // data contains the response
+          return data.responseData.feed.entries;
+          // status is the HTTP status
+          // headers is the header getter function
+          // config is the object that was used to create the HTTP request
+        }).error(function(data, status, headers, config) {
+          });
 
-      $.ajax({
-    
-      type: "GET",
-      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss",
-      dataType: "jsonp",
 
-      success: function(data) {
-        // console.log(data);
-        // console.log(data.responseData.feed.entries);
-        News4 = data.responseData.feed.entries;
-      }
-  });
 
     })();
