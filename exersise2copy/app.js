@@ -28,16 +28,18 @@
       //console.log(feed),
         feed.load(function(result) {
          if (!result.error) {
+          console.log(result);
           return result;
         
 
  
         }
-        console.log(gems2);
+        
       });
     }
     google.setOnLoadCallback(initialize);
   }();
+  console.log(gems2);
 
 
       var gems = [
