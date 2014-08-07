@@ -5,19 +5,19 @@
       //$http is working in this
            this.telegraph = News;
            this.bbc = News3;
-      //      this.mercury = $http({
+           this.mercury = $http({
 
-      // method: 'JSONP',
-      // url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
-      //   }).success(function(data, status, headers, config) {
-      //     // data contains the response
-      //     return data.responseData.feed.entries;
-      //     // status is the HTTP status
-      //     // headers is the header getter function
-      //     // config is the object that was used to create the HTTP request
+      method: 'JSONP',
+      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
+        }).success(function(data, status, headers, config) {
+          // data contains the response
+          return data.responseData.feed.entries;
+          // status is the HTTP status
+          // headers is the header getter function
+          // config is the object that was used to create the HTTP request
 
-      //   }).error(function(data, status, headers, config) {
-      //     });
+        }).error(function(data, status, headers, config) {
+          });
 
 
 
