@@ -13,7 +13,7 @@
       url: 'News.json'
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.news = data;
+          $scope.this.news = data;
           console.log(data);
 
           //console.log(data.responseData.feed.entries);
