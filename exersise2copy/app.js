@@ -13,7 +13,7 @@
       url: 'News.json'
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.this.news = data;
+          $scope.mercury = data;
           console.log(data);
 
           //console.log(data.responseData.feed.entries);
