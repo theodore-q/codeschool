@@ -9,8 +9,8 @@
 
       $http({
       method: 'get',
-     // url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
-      url: 'News.json'
+      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
+      //url: 'News.json'
         }).success(function(data, status, headers, config) {
           // data contains the response
           $scope.posts = data.responseData.feed.entries;
