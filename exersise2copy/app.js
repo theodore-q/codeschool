@@ -13,7 +13,7 @@
         
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.telegraph = data.responseData.feed.entries;
+          $scope.tag = data.responseData.feed.entries;
           console.log(tag);
 
         }).error(function(data, status, headers, config) {
