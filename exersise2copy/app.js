@@ -6,26 +6,25 @@
           this.telegraph = News;
           this.bbc = News3;
 
+var websites = [["http://www.telegraph.co.uk/news/uknews/rss","telegraph"],
+["http://www.leicestermercury.co.uk/stories.rss","mercury"],
+
+];
 
       $http({
       method: 'JSONP',
-      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss&callback=JSON_CALLBACK'
-      //method: 'get',
-      //url: 'News.json'
+      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=" + websites[1[0]] + "&callback=JSON_CALLBACK"
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.mercury = data.responseData.feed.entries;
+          $scope.websites[1[1]] = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
-
-          //console.log(data.responseData.feed.entries);
-          //return data.responseData.feed.entries;
-          // status is the HTTP status
-          // headers is the header getter function
-          // config is the object that was used to create the HTTP request
 
         }).error(function(data, status, headers, config) {
           });
     });
+
+
+
 
       app.controller('PanelController', function (){
       this.tab = 1;
