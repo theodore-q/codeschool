@@ -14,7 +14,7 @@
       //url: 'News.json'
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.posts = data.responseData.feed.entries;
+          $scope.mercury = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
 
           //console.log(data.responseData.feed.entries);
