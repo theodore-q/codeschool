@@ -47,10 +47,10 @@
 				
 				<div class="panel" ng-show="panel.isSelected(2)">
 						<ul class="list-group">
-							<li class="list-group-item" ng-repeat="bbcarticle in telegraph">
+							<li class="list-group-item" ng-repeat="article in telegraph">
 								<h3>
 					  				<a href={{article.link}}>{{article.title}}</a>
-					    			<em class="pull-right">{{article.author}}</em>
+					    			<em class="pull-right">{{article.author| limitTo : 10}}</em>
 					    		</h3>
 					    		<h4>
 					    			<p>{{article.contentSnippet}}</p>
@@ -64,7 +64,7 @@
 							<li class="list-group-item" ng-repeat="article in guardian">
 								<h3>
 					  				<a href={{article.link}}>{{article.title}}</a>
-					    			<em class="pull-right">{{article.author}}</em>
+					    			<em class="pull-right">{{article.author | limitTo : 10}}</em>
 					    		</h3>
 					    		<h4>
 					    			<p>{{article.contentSnippet}}</p>
@@ -77,7 +77,7 @@
 							<li class="list-group-item" ng-repeat="article in mercury">
 								<h3>
 					  				<a href={{article.link}}>{{article.title}}</a>
-					    			<em class="pull-right">{{article.author}}</em>
+					    			<em class="pull-right">{{article.author | limitTo : 10}}</em>
 					    		</h3>
 					    		<h4>
 					    			<p>{{article.contentSnippet}}</p>
