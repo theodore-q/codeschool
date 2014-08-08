@@ -6,17 +6,15 @@
           this.telegraph = News;
           this.bbc = News3;
 
-var websites = [["http://www.telegraph.co.uk/news/uknews/rss","telegraph"],
-["http://www.leicestermercury.co.uk/stories.rss","mercury"],
+var websites = ["http://www.telegraph.co.uk/news/uknews/rss"];
 
-];
 
       $http({
       method: 'JSONP',
-      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=" + websites[1[0]] + "&callback=JSON_CALLBACK"
+      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=" + websites[0] + "&callback=JSON_CALLBACK"
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.websites[1[1]] = data.responseData.feed.entries;
+          $scope.mercury = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
 
         }).error(function(data, status, headers, config) {
