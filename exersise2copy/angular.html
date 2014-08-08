@@ -59,8 +59,8 @@
 						<ul class="list-group">
 							<li class="list-group-item" ng-repeat="article in mercury">
 								<h3>
-					  				{{article.title}}
-					    			<em class="pull-right">{{article.publishedDate | date : 'short'}}</em>
+					  				<a href={{article.link}}>{{article.title}}</a>
+					    			<em class="pull-right">{{article.author}}</em>
 					    		</h3>
 					    		<h4>
 					    			<p>{{article.contentSnippet}}</p>
