@@ -11,16 +11,16 @@
       method: 'JSONP',
       url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q="+url+"&callback=JSON_CALLBACK"
         
-        });}
-     
-     
-      httpRequest('http://www.telegraph.co.uk/news/uknews/rss').success(function(data, status, headers, config) {
+        }).success(function(data, status, headers, config) {
           // data contains the response
           $scope.telegraph = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
 
         }).error(function(data, status, headers, config) {
-          });{}
+          });
+     
+     
+      httpRequest('http://www.telegraph.co.uk/news/uknews/rss');{}
 
       $http({
       method: 'JSONP',
