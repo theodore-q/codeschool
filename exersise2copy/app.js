@@ -22,8 +22,8 @@
      
       httpRequest('http://www.telegraph.co.uk/news/uknews/rss','telegraph');{}
       httpRequest('http://feeds.bbci.co.uk/news/rss.xml','bbc');{}
-      // httpRequest('http://www.telegraph.co.uk/news/uknews/rss','telegraph');{}
-      // httpRequest('http://www.telegraph.co.uk/news/uknews/rss','telegraph');{}
+      // httpRequest('http://www.theguardian.com/uk/rss','guardian');{}
+      // httpRequest('http://www.leicestermercury.co.uk/all-content.rss','mercury');{}
 
     
 
