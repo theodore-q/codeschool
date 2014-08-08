@@ -6,20 +6,21 @@
 
 
 
-     function httpRequest(url,tag){
+     function httpRequest(url){
       $http({
       method: 'JSONP',
       url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q="+url+"&callback=JSON_CALLBACK"
-        }).success(function(data, status, headers, config) {
+        
+        });}
+     
+     
+      httpRequest('http://www.telegraph.co.uk/news/uknews/rss').success(function(data, status, headers, config) {
           // data contains the response
-          tag = data.responseData.feed.entries;
+          $scope.telegraph = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
 
         }).error(function(data, status, headers, config) {
-          });
-     }
-     
-      httpRequest('http://www.telegraph.co.uk/news/uknews/rss',$scope.telegraph);{}
+          });{}
 
       $http({
       method: 'JSONP',
