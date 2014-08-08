@@ -19,7 +19,7 @@
           });
      }
      
-      httpRequest('http://www.telegraph.co.uk/news/uknews/rss','$scope.telegraph');{}
+      httpRequest('http://www.telegraph.co.uk/news/uknews/rss',$scope.telegraph);{}
 
       $http({
       method: 'JSONP',
