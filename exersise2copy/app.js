@@ -23,7 +23,7 @@
       httpRequest('http://www.telegraph.co.uk/news/uknews/rss','telegraph');{}
       httpRequest('http://feeds.bbci.co.uk/news/rss.xml','bbc');{}
       httpRequest('http://www.theguardian.com/uk/rss','guardian');{}
-      // httpRequest('http://www.leicestermercury.co.uk/all-content.rss','mercury');{}
+      httpRequest('http://www.leicestermercury.co.uk/all-content.rss','mercury');{}
 
     
 
@@ -39,16 +39,16 @@
       //     });
     
 
-      $http({
-      method: 'JSONP',
-      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.leicestermercury.co.uk/all-content.rss&callback=JSON_CALLBACK"
-        }).success(function(data, status, headers, config) {
-          // data contains the response
-          $scope.mercury = data.responseData.feed.entries;
-          console.log(data.responseData.feed.entries);
+      // $http({
+      // method: 'JSONP',
+      // url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.leicestermercury.co.uk/all-content.rss&callback=JSON_CALLBACK"
+      //   }).success(function(data, status, headers, config) {
+      //     // data contains the response
+      //     $scope.mercury = data.responseData.feed.entries;
+      //     console.log(data.responseData.feed.entries);
 
-        }).error(function(data, status, headers, config) {
-          });
+      //   }).error(function(data, status, headers, config) {
+      //     });
     });
 
 
