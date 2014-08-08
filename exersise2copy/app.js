@@ -3,18 +3,51 @@
 
     app.controller('NewsController', function($scope,$http) {
       //$http is working in this
-          this.telegraph = News;
           this.bbc = News3;
-
-var websites = ["http://www.telegraph.co.uk/news/uknews/rss"];
 
 
       $http({
       method: 'JSONP',
-      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=" + websites[0] + "&callback=JSON_CALLBACK"
+      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss&callback=JSON_CALLBACK"
         }).success(function(data, status, headers, config) {
           // data contains the response
-          $scope.mercury = data.responseData.feed.entries;
+          $scope.telegraph = data.responseData.feed.entries;
+          console.log(data.responseData.feed.entries);
+
+        }).error(function(data, status, headers, config) {
+          });
+    
+
+      $http({
+      method: 'JSONP',
+      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://feeds.bbci.co.uk/news/rss.xml&callback=JSON_CALLBACK"
+        }).success(function(data, status, headers, config) {
+          // data contains the response
+          $scope.bbc = data.responseData.feed.entries;
+          console.log(data.responseData.feed.entries);
+
+        }).error(function(data, status, headers, config) {
+          });
+    
+
+      $http({
+      method: 'JSONP',
+      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss&callback=JSON_CALLBACK"
+        }).success(function(data, status, headers, config) {
+          // data contains the response
+          $scope.guardian = data.responseData.feed.entries;
+          console.log(data.responseData.feed.entries);
+
+        }).error(function(data, status, headers, config) {
+          });
+    
+
+      $http({
+      method: 'JSONP',
+      url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss&callback=JSON_CALLBACK"
+        }).success(function(data, status, headers, config) {
+          // data contains the response
+          $scope.mercuary = data.responseData.feed.entries;
           console.log(data.responseData.feed.entries);
 
         }).error(function(data, status, headers, config) {
