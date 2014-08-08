@@ -3,7 +3,7 @@
 
     app.controller('NewsController', function($scope,$http) {
       //$http is working in this
-          this.bbc = News3;
+
 
 
       $http({
