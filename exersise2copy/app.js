@@ -13,14 +13,14 @@
         
         }).success(function(data, status, headers, config) {
           // data contains the response
-          tag;
+          $scope.telegraph = data.responseData.feed.entries;
           console.log(tag);
 
         }).error(function(data, status, headers, config) {
           });
      }
      
-      httpRequest('http://www.telegraph.co.uk/news/uknews/rss','$scope.telegraph = data.responseData.feed.entries');{}
+      httpRequest('http://www.telegraph.co.uk/news/uknews/rss','');{}
 
       $http({
       method: 'JSONP',
