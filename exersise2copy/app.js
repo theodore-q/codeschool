@@ -14,7 +14,7 @@
         }).success(function(data, status, headers, config) {
           // data contains the response
           $scope.telegraph = data.responseData.feed.entries;
-          console.log(data.responseData.feed.entries);
+          console.log(url);
 
         }).error(function(data, status, headers, config) {
           });
