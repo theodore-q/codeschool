@@ -6,7 +6,7 @@
 
 
 
-     function httpRequest(url){
+     function httpRequest(url,tag){
       $http({
       method: 'JSONP',
       url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q="+url+"&callback=JSON_CALLBACK"
@@ -14,13 +14,13 @@
         }).success(function(data, status, headers, config) {
           // data contains the response
           $scope.telegraph = data.responseData.feed.entries;
-          console.log(url);
+          console.log(tag);
 
         }).error(function(data, status, headers, config) {
           });
      }
      
-      httpRequest('http://www.telegraph.co.uk/news/uknews/rss');{}
+      httpRequest('http://www.telegraph.co.uk/news/uknews/rss','telegraph');{}
 
       $http({
       method: 'JSONP',
