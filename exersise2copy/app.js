@@ -18,7 +18,7 @@
 
         }).error(function(data, status, headers, config) {
           });
-     
+     }
      
       httpRequest('http://www.telegraph.co.uk/news/uknews/rss');{}
 
