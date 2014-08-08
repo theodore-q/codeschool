@@ -60,7 +60,7 @@
 							<li class="list-group-item" ng-repeat="article in mercury">
 								<h3>
 					  				{{article.title}}
-					    			<em class="pull-right">{{xmlarticle.publishedDate}}</em>
+					    			<em class="pull-right">{{xmlarticle.publishedDate | date : format}}</em>
 					    		</h3>
 					    		<h4>
 					    			<p>{{article.contentSnippet}}</p>
