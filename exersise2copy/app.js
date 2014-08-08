@@ -8,7 +8,7 @@
 
 
       $http({
-      method: 'JSONP',
+      method: 'JSON',
      // url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
       url: 'News.json'
         }).success(function(data, status, headers, config) {
