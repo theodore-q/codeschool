@@ -9,7 +9,7 @@
 
       $http({
       method: 'JSONP',
-      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss'
+      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://www.telegraph.co.uk/news/uknews/rss?callback=something'
       //method: 'get',
       //url: 'News.json'
         }).success(function(data, status, headers, config) {
