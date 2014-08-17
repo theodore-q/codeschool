@@ -21,14 +21,24 @@
         {
           name: "Dodecahedron",
           price: 2.95,
-          description: '. . .',
+          images: [
+          { full: 'product01-image01-full.jpg', thumb: 'product01-image01-thumb.jpg' },
+          { full: 'product01-image02-full.jpg', thumb: 'product01-image02-thumb.jpg' },
+          { full: 'product01-image03-full.jpg', thumb: 'product01-image03-thumb.jpg' },
+          ],
+          description: 'Amazing',
           canPurchase: true,
           soldOut: false,
         },
         {
           name: "Pentagonal Gem",
           price: 5.95,
-          description: '. . .',
+          images: [
+          { full: 'product01-image01-full.jpg', thumb: 'product01-image01-thumb.jpg' },
+          { full: 'product01-image02-full.jpg', thumb: 'product01-image02-thumb.jpg' },
+          { full: 'product01-image03-full.jpg', thumb: 'product01-image03-thumb.jpg' },
+          ],
+          description: 'not so amazing',
           canPurchase: false,
           soldOut: false,
         }
