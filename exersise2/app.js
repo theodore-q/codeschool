@@ -17,27 +17,26 @@
   });
 
 
-      var gems2 = function (){
-
-      google.load("feeds", "1");
-
-
-
-     function initialize() {
-      var feed = new google.feeds.Feed("http://www.telegraph.co.uk/news/uknews/rss");
-      feed.setNumEntries(10);
-      console.log(feed),
-      feed.load(function(result) {
-        if (!result.error) {
-        return result;
-        
-
- 
+      var gems = [
+        {
+          name: "Dodecahedron",
+          price: 2.95,
+          description: '. . .',
+          canPurchase: true,
+          soldOut: false,
+        },
+        {
+          name: "Pentagonal Gem",
+          price: 5.95,
+          description: '. . .',
+          canPurchase: false,
+          soldOut: false,
         }
-        console.log(gems);
-      });
-    }
-    google.setOnLoadCallback(initialize);
-  }();
+      ];
+
+
+
+
+
 
     })();
